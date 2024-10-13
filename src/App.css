@@ -1,0 +1,94 @@
+/* General container styles */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1200px;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.input-box{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.input-box input {
+  padding: 0.7rem;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 50%;
+  max-width: 400px;
+  text-align: center;
+  transition: all 0.3s ease;
+  &:focus{
+    border: 1px solid #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  }
+}
+
+.input-box button{
+  padding: 0.7rem 1.5rem;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover{
+    background-color: #45a049;
+  }
+}
+
+.image-feed{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.image-feed div{
+  width: 25%;
+  min-width: 300px;
+  padding: 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  
+}
+
+.image-feed div:hover img{
+  transform: scale(1.1);
+}
+
+.image-feed div img{
+  width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 668px){
+  .image-feed div{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
